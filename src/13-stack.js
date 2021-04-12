@@ -11,17 +11,22 @@
  *
  */
 class Stack {
-  push(/* element */) {
-    throw new Error('Not implemented');
-  }
+  class Stack {
+    constructor() { // конструктор класса запускается 1 раз при инициализации
+      this.stack = []; // создаем пустой массив для каждого объекта класса свой
+    }
 
-  pop() {
-    throw new Error('Not implemented');
-  }
+    push(element) {
+      this.stack.push(element); // добаляем новый элемент в стек для данного объекта
+    }
 
-  peek() {
-    throw new Error('Not implemented');
+    pop() {
+      return this.stack.pop();// удаляем элемент из стека для данного объекта
+    }
+
+    peek() {
+      return this.stack[this.stack.length - 1]; // возвращаем значение последнего элемента из стека для данного объекта
+    }
   }
-}
 
 module.exports = Stack;
